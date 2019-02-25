@@ -30,6 +30,7 @@ const phrases = [
 	'Rack your brains',
 	'Take with a grain of salt',
 	'Taken for a ride',
+	'A change is as good as a rest',
 ];
 
 let phraseToGuess = [];
