@@ -101,6 +101,7 @@ function checkLetter (event) {
 		if (letters[i].textContent.toUpperCase() === event.target.textContent.toUpperCase()) {
 			letters[i].classList.add('show');
 			letter = letters[i].textContent;
+			console.log(event);
 		}
 	}
 	return letter;
