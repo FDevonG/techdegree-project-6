@@ -101,7 +101,6 @@ function checkLetter (event) {
 		if (letters[i].textContent.toUpperCase() === event.target.textContent.toUpperCase()) {
 			letters[i].classList.add('show');
 			letter = letters[i].textContent;
-			console.log(event);
 		}
 	}
 	return letter;
@@ -111,6 +110,7 @@ qwerty.addEventListener('click', (event) => {
 	'use strict';
 	if (event.target.tagName === 'BUTTON') {
 		const letterFound = checkLetter(event);
+		event.target.disabled = true;
 		//if letterfound === null increase the missed count and remove a heart from the scoreboard
 		if (letterFound === null) {
 			const hearts = document.querySelectorAll('.tries');
@@ -172,6 +172,7 @@ function resetKeyBoard () {
 	const pressedKeys = document.querySelectorAll('.chosen');
 	for (let i = 0; i < pressedKeys.length; i++) {
 		pressedKeys[i].classList.remove('chosen');
+		pressedKeys[i].disabled = false;
 	}
 }
 
